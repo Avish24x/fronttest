@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 500px;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background-image: url("Layer2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container_second {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60%;
+  position: relative;
+}
+
+.container_second::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("star.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+}
+
+.container_second::after {
+  content: "";
+  position: absolute;
+  top: -140px;
+  margin: 0px;
+  left: 0;
+  width: 26%;
+  height: 40%;
+  background-image: url("cloud.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.container_third {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40%;
+  position: relative;
+}
+
+.container_third::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("background2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+}
+
+.container_second img,
+.container_third img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+  .container::before {
+    top: 50%; /* Adjust the top positioning for mobile devices */
+    transform: translateY(20%);
+  }
+}
